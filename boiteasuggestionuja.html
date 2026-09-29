@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Boîte à idées du CERAP</title>
+
+
+<style>
+
+/* PAGE */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff5ff, #f5fbff);
+    margin: 0;
+    padding: 30px;
+    color: #17324d;
+}
+
+
+/* BOÎTE PRINCIPALE */
+
+.boite {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    animation: apparition 1s ease;
+}
+
+
+/* TITRE */
+
+h1 {
+    text-align: center;
+    color: #1683c2;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+/* SLOGAN */
+
+.slogan {
+    text-align: center;
+    font-weight: bold;
+    color: #276183;
+    margin-bottom: 30px;
+}
+
+
+/* LABELS */
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+
+/* CHAMPS */
+
+input,
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 2px solid #c8eafa;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+
+/* EFFET SUR LES CHAMPS */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #1683c2;
+    box-shadow: 0 0 8px rgba(22,131,194,0.2);
+}
+
+
+/* MESSAGE */
+
+textarea {
+    height: 160px;
+    resize: vertical;
+}
+
+
+/* BOUTON */
+
+button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 14px 30px;
+    background-color: #1683c2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+button:hover {
+    background-color: #0d679d;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+
+/* ANIMATION */
+
+@keyframes apparition {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* VERSION TELEPHONE */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .boite {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="boite">
+
+
+    <h1>Boîte à idées du CERAP</h1>
+
+
+    <p class="slogan">
+        « Nous transformons nos idées en action »
+    </p>
+
+
+
+    <form action="mailto:djarateraphael@gmail.com" method="post" enctype="text/plain">
+
+
+        <label for="nom">
+            Nom et prénom
+        </label>
+
+
+        <input
+            type="text"
+            id="nom"
+            name="Nom et prénom"
+            placeholder="Vous pouvez rester anonyme"
+        >
+
+
+
+        <label for="type">
+            Type de contribution
+        </label>
+
+
+        <select id="type" name="Type">
+
+            <option>Suggestion</option>
+
+            <option>Remarque</option>
+
+            <option>Proposition</option>
+
+        </select>
+
+
+
+        <label for="message">
+            Votre contribution
+        </label>
+
+
+        <textarea
+            id="message"
+            name="Message"
+            placeholder="Écrivez votre idée ici..."
+            required
+        ></textarea>
+
+
+
+        <button type="submit">
+            Envoyer ma contribution
+        </button>
+
+
+    </form>
+
+
+</div>
+
+
+</body>
+
+</html>
